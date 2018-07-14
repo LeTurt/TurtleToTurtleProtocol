@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+message TurtleBlock {
+  TurtleBlockHeader header = 1;
+  TurtleBaseTransaction baseTransaction = 2;
+  repeated TurtleTransaction transactions = 3;
+}
+
+message TurtleBlockHeader {
+  uint32 majorVersion = 1;
+  uint32 minorVersion = 2;
+  uint64 timestamp = 3;
+  string previousBlockHash = 4;
+  uint32 nonce = 5;
+}
+
+message TurtleBaseTransaction {
+  TurtleTransactionPrefix transaction = 1;
+}
+
+message TurtleTransaction {
+  TurtleTransactionPrefix transaction = 1;
+  repeated TurtleTransactionSignature signature = 2;
+}
+
+message TurtleTransactionPrefix {
+  uint32 version = 1;
+  uint64 unlockTime = 2;
+  repeated TurtleTransactionInput inputs = 3;
+  repeated TurtleTransactionOutput outputs = 4;
+  string paymentId = 5;
+  repeated uint32 extra = 6;
+}
+
+message TurtleTransactionSignature {
+  string signature = 1;
+}
+
+message TurtleTransactionInput {
+  oneof input {
+    TurtleTransactionInputGen gen = 1;
+    TurtleTransactionInputKey key = 2;
+  }
+}
+
+message TurtleTransactionInputGen {
+  int32 type = 1;
+  uint64 height = 2;
+}
+
+message TurtleTransactionInputKey {
+  int32 type = 1;
+  uint64 amount = 2;
+  repeated uint32 offsets = 3;
+  string keyImage = 4;
+}
+
+message TurtleTransactionOutputTarget {
+  uint32 type = 1;
+  string key = 2;
+}
+
+message TurtleTransactionOutput {
+  uint64 amount = 1;
+  TurtleTransactionOutputTarget target = 2;
+}

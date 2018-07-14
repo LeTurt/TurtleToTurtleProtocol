@@ -1,0 +1,43 @@
+syntax = "proto3";
+import "TurtleCoin.proto";
+
+message T2TDatagram {
+  uint32 p2pNetworkId = 1;
+  uint32 version = 2;
+  string peerId = 3;
+  oneof dataPayload {
+    T2TCandidateList t2tCandidateList = 4;
+    T2TCandidateListRequest t2tCandidateListRequest = 5;
+    BlockChainPayload blockChainPayload = 6;
+  }
+}
+
+message T2TCandidateList {
+  repeated T2TCandidate candidate = 1;
+}
+
+message T2TCandidateListRequest {
+  repeated uint32 blockChainId = 1;
+}
+
+message T2TCandidate {
+  string peerId = 1;
+  uint32 version = 2;
+  uint32 ipV4Address = 3;
+  string ipV6Address = 4;
+  uint32 port = 5;
+  uint32 ttl = 6;
+  T2TNodeCapability capability = 7;
+}
+
+message T2TNodeCapability {
+  bool archival = 1;
+  repeated uint32 blockChainId = 2;
+}
+
+message BlockChainPayload {
+  oneof data {
+    TurtleBlock block = 1;
+    TurtleTransaction transaction = 2;
+  }
+}
