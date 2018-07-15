@@ -11,12 +11,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.T2TCandidate');
+goog.provide('proto.TurtleToTurtle.T2TCandidate');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.T2TNodeCapability');
+goog.require('proto.TurtleToTurtle.T2TNodeCapability');
 
 
 /**
@@ -29,12 +29,12 @@ goog.require('proto.T2TNodeCapability');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.T2TCandidate = function(opt_data) {
+proto.TurtleToTurtle.T2TCandidate = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.T2TCandidate, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.T2TCandidate, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.T2TCandidate.displayName = 'proto.T2TCandidate';
+  proto.TurtleToTurtle.T2TCandidate.displayName = 'proto.TurtleToTurtle.T2TCandidate';
 }
 
 
@@ -49,8 +49,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.T2TCandidate.prototype.toObject = function(opt_includeInstance) {
-  return proto.T2TCandidate.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.T2TCandidate.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.T2TCandidate.toObject(opt_includeInstance, this);
 };
 
 
@@ -59,11 +59,11 @@ proto.T2TCandidate.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.T2TCandidate} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.T2TCandidate} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidate.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.T2TCandidate.toObject = function(includeInstance, msg) {
   var f, obj = {
     peerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     version: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -71,7 +71,7 @@ proto.T2TCandidate.toObject = function(includeInstance, msg) {
     ipv6address: jspb.Message.getFieldWithDefault(msg, 4, ""),
     port: jspb.Message.getFieldWithDefault(msg, 5, 0),
     ttl: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    capability: (f = msg.getCapability()) && proto.T2TNodeCapability.toObject(includeInstance, f)
+    capability: (f = msg.getCapability()) && proto.TurtleToTurtle.T2TNodeCapability.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -85,23 +85,23 @@ proto.T2TCandidate.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.T2TCandidate}
+ * @return {!proto.TurtleToTurtle.T2TCandidate}
  */
-proto.T2TCandidate.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.T2TCandidate.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.T2TCandidate;
-  return proto.T2TCandidate.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.T2TCandidate;
+  return proto.TurtleToTurtle.T2TCandidate.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.T2TCandidate} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.T2TCandidate} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.T2TCandidate}
+ * @return {!proto.TurtleToTurtle.T2TCandidate}
  */
-proto.T2TCandidate.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.T2TCandidate.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -133,8 +133,8 @@ proto.T2TCandidate.deserializeBinaryFromReader = function(msg, reader) {
       msg.setTtl(value);
       break;
     case 7:
-      var value = new proto.T2TNodeCapability;
-      reader.readMessage(value,proto.T2TNodeCapability.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.T2TNodeCapability;
+      reader.readMessage(value,proto.TurtleToTurtle.T2TNodeCapability.deserializeBinaryFromReader);
       msg.setCapability(value);
       break;
     default:
@@ -150,9 +150,9 @@ proto.T2TCandidate.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.T2TCandidate.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.T2TCandidate.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.T2TCandidate.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -160,11 +160,11 @@ proto.T2TCandidate.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.T2TCandidate} message
+ * @param {!proto.TurtleToTurtle.T2TCandidate} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidate.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.T2TCandidate.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPeerid();
   if (f.length > 0) {
@@ -213,7 +213,7 @@ proto.T2TCandidate.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       7,
       f,
-      proto.T2TNodeCapability.serializeBinaryToWriter
+      proto.TurtleToTurtle.T2TNodeCapability.serializeBinaryToWriter
     );
   }
 };
@@ -223,13 +223,13 @@ proto.T2TCandidate.serializeBinaryToWriter = function(message, writer) {
  * optional string peerId = 1;
  * @return {string}
  */
-proto.T2TCandidate.prototype.getPeerid = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getPeerid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.T2TCandidate.prototype.setPeerid = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setPeerid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -238,13 +238,13 @@ proto.T2TCandidate.prototype.setPeerid = function(value) {
  * optional uint32 version = 2;
  * @return {number}
  */
-proto.T2TCandidate.prototype.getVersion = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TCandidate.prototype.setVersion = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setVersion = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -253,13 +253,13 @@ proto.T2TCandidate.prototype.setVersion = function(value) {
  * optional uint32 ipV4Address = 3;
  * @return {number}
  */
-proto.T2TCandidate.prototype.getIpv4address = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getIpv4address = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TCandidate.prototype.setIpv4address = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setIpv4address = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -268,13 +268,13 @@ proto.T2TCandidate.prototype.setIpv4address = function(value) {
  * optional string ipV6Address = 4;
  * @return {string}
  */
-proto.T2TCandidate.prototype.getIpv6address = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getIpv6address = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.T2TCandidate.prototype.setIpv6address = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setIpv6address = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -283,13 +283,13 @@ proto.T2TCandidate.prototype.setIpv6address = function(value) {
  * optional uint32 port = 5;
  * @return {number}
  */
-proto.T2TCandidate.prototype.getPort = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getPort = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TCandidate.prototype.setPort = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setPort = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -298,34 +298,34 @@ proto.T2TCandidate.prototype.setPort = function(value) {
  * optional uint32 ttl = 6;
  * @return {number}
  */
-proto.T2TCandidate.prototype.getTtl = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.getTtl = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TCandidate.prototype.setTtl = function(value) {
+proto.TurtleToTurtle.T2TCandidate.prototype.setTtl = function(value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
 /**
  * optional T2TNodeCapability capability = 7;
- * @return {?proto.T2TNodeCapability}
+ * @return {?proto.TurtleToTurtle.T2TNodeCapability}
  */
-proto.T2TCandidate.prototype.getCapability = function() {
-  return /** @type{?proto.T2TNodeCapability} */ (
-    jspb.Message.getWrapperField(this, proto.T2TNodeCapability, 7));
+proto.TurtleToTurtle.T2TCandidate.prototype.getCapability = function() {
+  return /** @type{?proto.TurtleToTurtle.T2TNodeCapability} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TNodeCapability, 7));
 };
 
 
-/** @param {?proto.T2TNodeCapability|undefined} value */
-proto.T2TCandidate.prototype.setCapability = function(value) {
+/** @param {?proto.TurtleToTurtle.T2TNodeCapability|undefined} value */
+proto.TurtleToTurtle.T2TCandidate.prototype.setCapability = function(value) {
   jspb.Message.setWrapperField(this, 7, value);
 };
 
 
-proto.T2TCandidate.prototype.clearCapability = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.clearCapability = function() {
   this.setCapability(undefined);
 };
 
@@ -334,7 +334,7 @@ proto.T2TCandidate.prototype.clearCapability = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.T2TCandidate.prototype.hasCapability = function() {
+proto.TurtleToTurtle.T2TCandidate.prototype.hasCapability = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 

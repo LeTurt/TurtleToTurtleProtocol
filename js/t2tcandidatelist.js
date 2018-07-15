@@ -11,12 +11,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.T2TCandidateList');
+goog.provide('proto.TurtleToTurtle.T2TCandidateList');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.T2TCandidate');
+goog.require('proto.TurtleToTurtle.T2TCandidate');
 
 
 /**
@@ -29,19 +29,19 @@ goog.require('proto.T2TCandidate');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.T2TCandidateList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.T2TCandidateList.repeatedFields_, null);
+proto.TurtleToTurtle.T2TCandidateList = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.TurtleToTurtle.T2TCandidateList.repeatedFields_, null);
 };
-goog.inherits(proto.T2TCandidateList, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.T2TCandidateList, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.T2TCandidateList.displayName = 'proto.T2TCandidateList';
+  proto.TurtleToTurtle.T2TCandidateList.displayName = 'proto.TurtleToTurtle.T2TCandidateList';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.T2TCandidateList.repeatedFields_ = [1];
+proto.TurtleToTurtle.T2TCandidateList.repeatedFields_ = [1];
 
 
 
@@ -56,8 +56,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.T2TCandidateList.prototype.toObject = function(opt_includeInstance) {
-  return proto.T2TCandidateList.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.T2TCandidateList.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.T2TCandidateList.toObject(opt_includeInstance, this);
 };
 
 
@@ -66,14 +66,14 @@ proto.T2TCandidateList.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.T2TCandidateList} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.T2TCandidateList} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidateList.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.T2TCandidateList.toObject = function(includeInstance, msg) {
   var f, obj = {
     candidateList: jspb.Message.toObjectList(msg.getCandidateList(),
-    proto.T2TCandidate.toObject, includeInstance)
+    proto.TurtleToTurtle.T2TCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -87,23 +87,23 @@ proto.T2TCandidateList.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.T2TCandidateList}
+ * @return {!proto.TurtleToTurtle.T2TCandidateList}
  */
-proto.T2TCandidateList.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.T2TCandidateList.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.T2TCandidateList;
-  return proto.T2TCandidateList.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.T2TCandidateList;
+  return proto.TurtleToTurtle.T2TCandidateList.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.T2TCandidateList} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.T2TCandidateList} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.T2TCandidateList}
+ * @return {!proto.TurtleToTurtle.T2TCandidateList}
  */
-proto.T2TCandidateList.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.T2TCandidateList.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -111,8 +111,8 @@ proto.T2TCandidateList.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.T2TCandidate;
-      reader.readMessage(value,proto.T2TCandidate.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.T2TCandidate;
+      reader.readMessage(value,proto.TurtleToTurtle.T2TCandidate.deserializeBinaryFromReader);
       msg.addCandidate(value);
       break;
     default:
@@ -128,9 +128,9 @@ proto.T2TCandidateList.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.T2TCandidateList.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.T2TCandidateList.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.T2TCandidateList.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.T2TCandidateList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -138,18 +138,18 @@ proto.T2TCandidateList.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.T2TCandidateList} message
+ * @param {!proto.TurtleToTurtle.T2TCandidateList} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidateList.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.T2TCandidateList.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCandidateList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.T2TCandidate.serializeBinaryToWriter
+      proto.TurtleToTurtle.T2TCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -157,31 +157,31 @@ proto.T2TCandidateList.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * repeated T2TCandidate candidate = 1;
- * @return {!Array<!proto.T2TCandidate>}
+ * @return {!Array<!proto.TurtleToTurtle.T2TCandidate>}
  */
-proto.T2TCandidateList.prototype.getCandidateList = function() {
-  return /** @type{!Array<!proto.T2TCandidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.T2TCandidate, 1));
+proto.TurtleToTurtle.T2TCandidateList.prototype.getCandidateList = function() {
+  return /** @type{!Array<!proto.TurtleToTurtle.T2TCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.TurtleToTurtle.T2TCandidate, 1));
 };
 
 
-/** @param {!Array<!proto.T2TCandidate>} value */
-proto.T2TCandidateList.prototype.setCandidateList = function(value) {
+/** @param {!Array<!proto.TurtleToTurtle.T2TCandidate>} value */
+proto.TurtleToTurtle.T2TCandidateList.prototype.setCandidateList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.T2TCandidate=} opt_value
+ * @param {!proto.TurtleToTurtle.T2TCandidate=} opt_value
  * @param {number=} opt_index
- * @return {!proto.T2TCandidate}
+ * @return {!proto.TurtleToTurtle.T2TCandidate}
  */
-proto.T2TCandidateList.prototype.addCandidate = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.T2TCandidate, opt_index);
+proto.TurtleToTurtle.T2TCandidateList.prototype.addCandidate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.TurtleToTurtle.T2TCandidate, opt_index);
 };
 
 
-proto.T2TCandidateList.prototype.clearCandidateList = function() {
+proto.TurtleToTurtle.T2TCandidateList.prototype.clearCandidateList = function() {
   this.setCandidateList([]);
 };
 

@@ -11,13 +11,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.BlockChainPayload');
+goog.provide('proto.TurtleToTurtle.BlockChainPayload');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.TurtleBlock');
-goog.require('proto.TurtleTransaction');
+goog.require('proto.TurtleToTurtle.TurtleCoin.TurtleBlock');
+goog.require('proto.TurtleToTurtle.TurtleCoin.TurtleTransaction');
 
 
 /**
@@ -30,12 +30,12 @@ goog.require('proto.TurtleTransaction');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.BlockChainPayload = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.BlockChainPayload.oneofGroups_);
+proto.TurtleToTurtle.BlockChainPayload = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_);
 };
-goog.inherits(proto.BlockChainPayload, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.BlockChainPayload, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.BlockChainPayload.displayName = 'proto.BlockChainPayload';
+  proto.TurtleToTurtle.BlockChainPayload.displayName = 'proto.TurtleToTurtle.BlockChainPayload';
 }
 /**
  * Oneof group definitions for this message. Each group defines the field
@@ -45,22 +45,22 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.BlockChainPayload.oneofGroups_ = [[1,2]];
+proto.TurtleToTurtle.BlockChainPayload.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
  */
-proto.BlockChainPayload.DataCase = {
+proto.TurtleToTurtle.BlockChainPayload.DataCase = {
   DATA_NOT_SET: 0,
   BLOCK: 1,
   TRANSACTION: 2
 };
 
 /**
- * @return {proto.BlockChainPayload.DataCase}
+ * @return {proto.TurtleToTurtle.BlockChainPayload.DataCase}
  */
-proto.BlockChainPayload.prototype.getDataCase = function() {
-  return /** @type {proto.BlockChainPayload.DataCase} */(jspb.Message.computeOneofCase(this, proto.BlockChainPayload.oneofGroups_[0]));
+proto.TurtleToTurtle.BlockChainPayload.prototype.getDataCase = function() {
+  return /** @type {proto.TurtleToTurtle.BlockChainPayload.DataCase} */(jspb.Message.computeOneofCase(this, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0]));
 };
 
 
@@ -76,8 +76,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.BlockChainPayload.prototype.toObject = function(opt_includeInstance) {
-  return proto.BlockChainPayload.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.BlockChainPayload.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.BlockChainPayload.toObject(opt_includeInstance, this);
 };
 
 
@@ -86,14 +86,14 @@ proto.BlockChainPayload.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.BlockChainPayload} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.BlockChainPayload} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.BlockChainPayload.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.BlockChainPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-    block: (f = msg.getBlock()) && proto.TurtleBlock.toObject(includeInstance, f),
-    transaction: (f = msg.getTransaction()) && proto.TurtleTransaction.toObject(includeInstance, f)
+    block: (f = msg.getBlock()) && proto.TurtleToTurtle.TurtleCoin.TurtleBlock.toObject(includeInstance, f),
+    transaction: (f = msg.getTransaction()) && proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -107,23 +107,23 @@ proto.BlockChainPayload.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.BlockChainPayload}
+ * @return {!proto.TurtleToTurtle.BlockChainPayload}
  */
-proto.BlockChainPayload.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.BlockChainPayload.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.BlockChainPayload;
-  return proto.BlockChainPayload.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.BlockChainPayload;
+  return proto.TurtleToTurtle.BlockChainPayload.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.BlockChainPayload} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.BlockChainPayload} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.BlockChainPayload}
+ * @return {!proto.TurtleToTurtle.BlockChainPayload}
  */
-proto.BlockChainPayload.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.BlockChainPayload.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -131,13 +131,13 @@ proto.BlockChainPayload.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.TurtleBlock;
-      reader.readMessage(value,proto.TurtleBlock.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.TurtleCoin.TurtleBlock;
+      reader.readMessage(value,proto.TurtleToTurtle.TurtleCoin.TurtleBlock.deserializeBinaryFromReader);
       msg.setBlock(value);
       break;
     case 2:
-      var value = new proto.TurtleTransaction;
-      reader.readMessage(value,proto.TurtleTransaction.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.TurtleCoin.TurtleTransaction;
+      reader.readMessage(value,proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.deserializeBinaryFromReader);
       msg.setTransaction(value);
       break;
     default:
@@ -153,9 +153,9 @@ proto.BlockChainPayload.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.BlockChainPayload.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.BlockChainPayload.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.BlockChainPayload.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -163,18 +163,18 @@ proto.BlockChainPayload.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.BlockChainPayload} message
+ * @param {!proto.TurtleToTurtle.BlockChainPayload} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.BlockChainPayload.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlock();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.TurtleBlock.serializeBinaryToWriter
+      proto.TurtleToTurtle.TurtleCoin.TurtleBlock.serializeBinaryToWriter
     );
   }
   f = message.getTransaction();
@@ -182,29 +182,29 @@ proto.BlockChainPayload.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       2,
       f,
-      proto.TurtleTransaction.serializeBinaryToWriter
+      proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional TurtleBlock block = 1;
- * @return {?proto.TurtleBlock}
+ * optional TurtleCoin.TurtleBlock block = 1;
+ * @return {?proto.TurtleToTurtle.TurtleCoin.TurtleBlock}
  */
-proto.BlockChainPayload.prototype.getBlock = function() {
-  return /** @type{?proto.TurtleBlock} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleBlock, 1));
+proto.TurtleToTurtle.BlockChainPayload.prototype.getBlock = function() {
+  return /** @type{?proto.TurtleToTurtle.TurtleCoin.TurtleBlock} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleBlock, 1));
 };
 
 
-/** @param {?proto.TurtleBlock|undefined} value */
-proto.BlockChainPayload.prototype.setBlock = function(value) {
-  jspb.Message.setOneofWrapperField(this, 1, proto.BlockChainPayload.oneofGroups_[0], value);
+/** @param {?proto.TurtleToTurtle.TurtleCoin.TurtleBlock|undefined} value */
+proto.TurtleToTurtle.BlockChainPayload.prototype.setBlock = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
 };
 
 
-proto.BlockChainPayload.prototype.clearBlock = function() {
+proto.TurtleToTurtle.BlockChainPayload.prototype.clearBlock = function() {
   this.setBlock(undefined);
 };
 
@@ -213,28 +213,28 @@ proto.BlockChainPayload.prototype.clearBlock = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.BlockChainPayload.prototype.hasBlock = function() {
+proto.TurtleToTurtle.BlockChainPayload.prototype.hasBlock = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * optional TurtleTransaction transaction = 2;
- * @return {?proto.TurtleTransaction}
+ * optional TurtleCoin.TurtleTransaction transaction = 2;
+ * @return {?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction}
  */
-proto.BlockChainPayload.prototype.getTransaction = function() {
-  return /** @type{?proto.TurtleTransaction} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleTransaction, 2));
+proto.TurtleToTurtle.BlockChainPayload.prototype.getTransaction = function() {
+  return /** @type{?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleTransaction, 2));
 };
 
 
-/** @param {?proto.TurtleTransaction|undefined} value */
-proto.BlockChainPayload.prototype.setTransaction = function(value) {
-  jspb.Message.setOneofWrapperField(this, 2, proto.BlockChainPayload.oneofGroups_[0], value);
+/** @param {?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction|undefined} value */
+proto.TurtleToTurtle.BlockChainPayload.prototype.setTransaction = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
 };
 
 
-proto.BlockChainPayload.prototype.clearTransaction = function() {
+proto.TurtleToTurtle.BlockChainPayload.prototype.clearTransaction = function() {
   this.setTransaction(undefined);
 };
 
@@ -243,7 +243,7 @@ proto.BlockChainPayload.prototype.clearTransaction = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.BlockChainPayload.prototype.hasTransaction = function() {
+proto.TurtleToTurtle.BlockChainPayload.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 

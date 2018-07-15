@@ -11,7 +11,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.T2TNodeCapability');
+goog.provide('proto.TurtleToTurtle.T2TNodeCapability');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,19 +28,19 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.T2TNodeCapability = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.T2TNodeCapability.repeatedFields_, null);
+proto.TurtleToTurtle.T2TNodeCapability = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.TurtleToTurtle.T2TNodeCapability.repeatedFields_, null);
 };
-goog.inherits(proto.T2TNodeCapability, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.T2TNodeCapability, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.T2TNodeCapability.displayName = 'proto.T2TNodeCapability';
+  proto.TurtleToTurtle.T2TNodeCapability.displayName = 'proto.TurtleToTurtle.T2TNodeCapability';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.T2TNodeCapability.repeatedFields_ = [2];
+proto.TurtleToTurtle.T2TNodeCapability.repeatedFields_ = [2];
 
 
 
@@ -55,8 +55,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.T2TNodeCapability.prototype.toObject = function(opt_includeInstance) {
-  return proto.T2TNodeCapability.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.T2TNodeCapability.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.T2TNodeCapability.toObject(opt_includeInstance, this);
 };
 
 
@@ -65,11 +65,11 @@ proto.T2TNodeCapability.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.T2TNodeCapability} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.T2TNodeCapability} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TNodeCapability.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.T2TNodeCapability.toObject = function(includeInstance, msg) {
   var f, obj = {
     archival: jspb.Message.getFieldWithDefault(msg, 1, false),
     blockchainidList: jspb.Message.getRepeatedField(msg, 2)
@@ -86,23 +86,23 @@ proto.T2TNodeCapability.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.T2TNodeCapability}
+ * @return {!proto.TurtleToTurtle.T2TNodeCapability}
  */
-proto.T2TNodeCapability.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.T2TNodeCapability.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.T2TNodeCapability;
-  return proto.T2TNodeCapability.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.T2TNodeCapability;
+  return proto.TurtleToTurtle.T2TNodeCapability.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.T2TNodeCapability} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.T2TNodeCapability} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.T2TNodeCapability}
+ * @return {!proto.TurtleToTurtle.T2TNodeCapability}
  */
-proto.T2TNodeCapability.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.T2TNodeCapability.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -130,9 +130,9 @@ proto.T2TNodeCapability.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.T2TNodeCapability.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.T2TNodeCapability.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.T2TNodeCapability.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -140,11 +140,11 @@ proto.T2TNodeCapability.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.T2TNodeCapability} message
+ * @param {!proto.TurtleToTurtle.T2TNodeCapability} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TNodeCapability.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.T2TNodeCapability.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getArchival();
   if (f) {
@@ -169,13 +169,13 @@ proto.T2TNodeCapability.serializeBinaryToWriter = function(message, writer) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.T2TNodeCapability.prototype.getArchival = function() {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.getArchival = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 1, false));
 };
 
 
 /** @param {boolean} value */
-proto.T2TNodeCapability.prototype.setArchival = function(value) {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.setArchival = function(value) {
   jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -184,13 +184,13 @@ proto.T2TNodeCapability.prototype.setArchival = function(value) {
  * repeated uint32 blockChainId = 2;
  * @return {!Array<number>}
  */
-proto.T2TNodeCapability.prototype.getBlockchainidList = function() {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.getBlockchainidList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
 
 /** @param {!Array<number>} value */
-proto.T2TNodeCapability.prototype.setBlockchainidList = function(value) {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.setBlockchainidList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
 
@@ -199,12 +199,12 @@ proto.T2TNodeCapability.prototype.setBlockchainidList = function(value) {
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.T2TNodeCapability.prototype.addBlockchainid = function(value, opt_index) {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.addBlockchainid = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
-proto.T2TNodeCapability.prototype.clearBlockchainidList = function() {
+proto.TurtleToTurtle.T2TNodeCapability.prototype.clearBlockchainidList = function() {
   this.setBlockchainidList([]);
 };
 

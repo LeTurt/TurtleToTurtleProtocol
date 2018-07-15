@@ -1,5 +1,11 @@
+// Copyright (c) 2018, The TurtleCoin Developers
+// 
+// Please see the included LICENSE file for more information.
+
 syntax = "proto3";
 import "TurtleCoin.proto";
+
+package TurtleToTurtle;
 
 message T2TDatagram {
   uint32 p2pNetworkId = 1;
@@ -37,7 +43,7 @@ message T2TNodeCapability {
 
 message BlockChainPayload {
   oneof data {
-    TurtleBlock block = 1;
-    TurtleTransaction transaction = 2;
+    TurtleToTurtle.TurtleCoin.TurtleBlock block = 1;
+    TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 2;
   }
 }

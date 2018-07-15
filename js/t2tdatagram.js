@@ -11,14 +11,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.T2TDatagram');
+goog.provide('proto.TurtleToTurtle.T2TDatagram');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.BlockChainPayload');
-goog.require('proto.T2TCandidateList');
-goog.require('proto.T2TCandidateListRequest');
+goog.require('proto.TurtleToTurtle.BlockChainPayload');
+goog.require('proto.TurtleToTurtle.T2TCandidateList');
+goog.require('proto.TurtleToTurtle.T2TCandidateListRequest');
 
 
 /**
@@ -31,12 +31,12 @@ goog.require('proto.T2TCandidateListRequest');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.T2TDatagram = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.T2TDatagram.oneofGroups_);
+proto.TurtleToTurtle.T2TDatagram = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.TurtleToTurtle.T2TDatagram.oneofGroups_);
 };
-goog.inherits(proto.T2TDatagram, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.T2TDatagram, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.T2TDatagram.displayName = 'proto.T2TDatagram';
+  proto.TurtleToTurtle.T2TDatagram.displayName = 'proto.TurtleToTurtle.T2TDatagram';
 }
 /**
  * Oneof group definitions for this message. Each group defines the field
@@ -46,12 +46,12 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.T2TDatagram.oneofGroups_ = [[4,5,6]];
+proto.TurtleToTurtle.T2TDatagram.oneofGroups_ = [[4,5,6]];
 
 /**
  * @enum {number}
  */
-proto.T2TDatagram.DatapayloadCase = {
+proto.TurtleToTurtle.T2TDatagram.DatapayloadCase = {
   DATAPAYLOAD_NOT_SET: 0,
   T2TCANDIDATELIST: 4,
   T2TCANDIDATELISTREQUEST: 5,
@@ -59,10 +59,10 @@ proto.T2TDatagram.DatapayloadCase = {
 };
 
 /**
- * @return {proto.T2TDatagram.DatapayloadCase}
+ * @return {proto.TurtleToTurtle.T2TDatagram.DatapayloadCase}
  */
-proto.T2TDatagram.prototype.getDatapayloadCase = function() {
-  return /** @type {proto.T2TDatagram.DatapayloadCase} */(jspb.Message.computeOneofCase(this, proto.T2TDatagram.oneofGroups_[0]));
+proto.TurtleToTurtle.T2TDatagram.prototype.getDatapayloadCase = function() {
+  return /** @type {proto.TurtleToTurtle.T2TDatagram.DatapayloadCase} */(jspb.Message.computeOneofCase(this, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0]));
 };
 
 
@@ -78,8 +78,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.T2TDatagram.prototype.toObject = function(opt_includeInstance) {
-  return proto.T2TDatagram.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.T2TDatagram.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.T2TDatagram.toObject(opt_includeInstance, this);
 };
 
 
@@ -88,18 +88,18 @@ proto.T2TDatagram.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.T2TDatagram} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.T2TDatagram} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TDatagram.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.T2TDatagram.toObject = function(includeInstance, msg) {
   var f, obj = {
     p2pnetworkid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     version: jspb.Message.getFieldWithDefault(msg, 2, 0),
     peerid: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    t2tcandidatelist: (f = msg.getT2tcandidatelist()) && proto.T2TCandidateList.toObject(includeInstance, f),
-    t2tcandidatelistrequest: (f = msg.getT2tcandidatelistrequest()) && proto.T2TCandidateListRequest.toObject(includeInstance, f),
-    blockchainpayload: (f = msg.getBlockchainpayload()) && proto.BlockChainPayload.toObject(includeInstance, f)
+    t2tcandidatelist: (f = msg.getT2tcandidatelist()) && proto.TurtleToTurtle.T2TCandidateList.toObject(includeInstance, f),
+    t2tcandidatelistrequest: (f = msg.getT2tcandidatelistrequest()) && proto.TurtleToTurtle.T2TCandidateListRequest.toObject(includeInstance, f),
+    blockchainpayload: (f = msg.getBlockchainpayload()) && proto.TurtleToTurtle.BlockChainPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -113,23 +113,23 @@ proto.T2TDatagram.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.T2TDatagram}
+ * @return {!proto.TurtleToTurtle.T2TDatagram}
  */
-proto.T2TDatagram.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.T2TDatagram.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.T2TDatagram;
-  return proto.T2TDatagram.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.T2TDatagram;
+  return proto.TurtleToTurtle.T2TDatagram.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.T2TDatagram} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.T2TDatagram} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.T2TDatagram}
+ * @return {!proto.TurtleToTurtle.T2TDatagram}
  */
-proto.T2TDatagram.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.T2TDatagram.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -149,18 +149,18 @@ proto.T2TDatagram.deserializeBinaryFromReader = function(msg, reader) {
       msg.setPeerid(value);
       break;
     case 4:
-      var value = new proto.T2TCandidateList;
-      reader.readMessage(value,proto.T2TCandidateList.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.T2TCandidateList;
+      reader.readMessage(value,proto.TurtleToTurtle.T2TCandidateList.deserializeBinaryFromReader);
       msg.setT2tcandidatelist(value);
       break;
     case 5:
-      var value = new proto.T2TCandidateListRequest;
-      reader.readMessage(value,proto.T2TCandidateListRequest.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.T2TCandidateListRequest;
+      reader.readMessage(value,proto.TurtleToTurtle.T2TCandidateListRequest.deserializeBinaryFromReader);
       msg.setT2tcandidatelistrequest(value);
       break;
     case 6:
-      var value = new proto.BlockChainPayload;
-      reader.readMessage(value,proto.BlockChainPayload.deserializeBinaryFromReader);
+      var value = new proto.TurtleToTurtle.BlockChainPayload;
+      reader.readMessage(value,proto.TurtleToTurtle.BlockChainPayload.deserializeBinaryFromReader);
       msg.setBlockchainpayload(value);
       break;
     default:
@@ -176,9 +176,9 @@ proto.T2TDatagram.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.T2TDatagram.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.T2TDatagram.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.T2TDatagram.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -186,11 +186,11 @@ proto.T2TDatagram.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.T2TDatagram} message
+ * @param {!proto.TurtleToTurtle.T2TDatagram} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getP2pnetworkid();
   if (f !== 0) {
@@ -218,7 +218,7 @@ proto.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       4,
       f,
-      proto.T2TCandidateList.serializeBinaryToWriter
+      proto.TurtleToTurtle.T2TCandidateList.serializeBinaryToWriter
     );
   }
   f = message.getT2tcandidatelistrequest();
@@ -226,7 +226,7 @@ proto.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       5,
       f,
-      proto.T2TCandidateListRequest.serializeBinaryToWriter
+      proto.TurtleToTurtle.T2TCandidateListRequest.serializeBinaryToWriter
     );
   }
   f = message.getBlockchainpayload();
@@ -234,7 +234,7 @@ proto.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       6,
       f,
-      proto.BlockChainPayload.serializeBinaryToWriter
+      proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter
     );
   }
 };
@@ -244,13 +244,13 @@ proto.T2TDatagram.serializeBinaryToWriter = function(message, writer) {
  * optional uint32 p2pNetworkId = 1;
  * @return {number}
  */
-proto.T2TDatagram.prototype.getP2pnetworkid = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.getP2pnetworkid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TDatagram.prototype.setP2pnetworkid = function(value) {
+proto.TurtleToTurtle.T2TDatagram.prototype.setP2pnetworkid = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -259,13 +259,13 @@ proto.T2TDatagram.prototype.setP2pnetworkid = function(value) {
  * optional uint32 version = 2;
  * @return {number}
  */
-proto.T2TDatagram.prototype.getVersion = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.T2TDatagram.prototype.setVersion = function(value) {
+proto.TurtleToTurtle.T2TDatagram.prototype.setVersion = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -274,34 +274,34 @@ proto.T2TDatagram.prototype.setVersion = function(value) {
  * optional string peerId = 3;
  * @return {string}
  */
-proto.T2TDatagram.prototype.getPeerid = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.getPeerid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.T2TDatagram.prototype.setPeerid = function(value) {
+proto.TurtleToTurtle.T2TDatagram.prototype.setPeerid = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
  * optional T2TCandidateList t2tCandidateList = 4;
- * @return {?proto.T2TCandidateList}
+ * @return {?proto.TurtleToTurtle.T2TCandidateList}
  */
-proto.T2TDatagram.prototype.getT2tcandidatelist = function() {
-  return /** @type{?proto.T2TCandidateList} */ (
-    jspb.Message.getWrapperField(this, proto.T2TCandidateList, 4));
+proto.TurtleToTurtle.T2TDatagram.prototype.getT2tcandidatelist = function() {
+  return /** @type{?proto.TurtleToTurtle.T2TCandidateList} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateList, 4));
 };
 
 
-/** @param {?proto.T2TCandidateList|undefined} value */
-proto.T2TDatagram.prototype.setT2tcandidatelist = function(value) {
-  jspb.Message.setOneofWrapperField(this, 4, proto.T2TDatagram.oneofGroups_[0], value);
+/** @param {?proto.TurtleToTurtle.T2TCandidateList|undefined} value */
+proto.TurtleToTurtle.T2TDatagram.prototype.setT2tcandidatelist = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
-proto.T2TDatagram.prototype.clearT2tcandidatelist = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.clearT2tcandidatelist = function() {
   this.setT2tcandidatelist(undefined);
 };
 
@@ -310,28 +310,28 @@ proto.T2TDatagram.prototype.clearT2tcandidatelist = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.T2TDatagram.prototype.hasT2tcandidatelist = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.hasT2tcandidatelist = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
  * optional T2TCandidateListRequest t2tCandidateListRequest = 5;
- * @return {?proto.T2TCandidateListRequest}
+ * @return {?proto.TurtleToTurtle.T2TCandidateListRequest}
  */
-proto.T2TDatagram.prototype.getT2tcandidatelistrequest = function() {
-  return /** @type{?proto.T2TCandidateListRequest} */ (
-    jspb.Message.getWrapperField(this, proto.T2TCandidateListRequest, 5));
+proto.TurtleToTurtle.T2TDatagram.prototype.getT2tcandidatelistrequest = function() {
+  return /** @type{?proto.TurtleToTurtle.T2TCandidateListRequest} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateListRequest, 5));
 };
 
 
-/** @param {?proto.T2TCandidateListRequest|undefined} value */
-proto.T2TDatagram.prototype.setT2tcandidatelistrequest = function(value) {
-  jspb.Message.setOneofWrapperField(this, 5, proto.T2TDatagram.oneofGroups_[0], value);
+/** @param {?proto.TurtleToTurtle.T2TCandidateListRequest|undefined} value */
+proto.TurtleToTurtle.T2TDatagram.prototype.setT2tcandidatelistrequest = function(value) {
+  jspb.Message.setOneofWrapperField(this, 5, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
-proto.T2TDatagram.prototype.clearT2tcandidatelistrequest = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.clearT2tcandidatelistrequest = function() {
   this.setT2tcandidatelistrequest(undefined);
 };
 
@@ -340,28 +340,28 @@ proto.T2TDatagram.prototype.clearT2tcandidatelistrequest = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.T2TDatagram.prototype.hasT2tcandidatelistrequest = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.hasT2tcandidatelistrequest = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
  * optional BlockChainPayload blockChainPayload = 6;
- * @return {?proto.BlockChainPayload}
+ * @return {?proto.TurtleToTurtle.BlockChainPayload}
  */
-proto.T2TDatagram.prototype.getBlockchainpayload = function() {
-  return /** @type{?proto.BlockChainPayload} */ (
-    jspb.Message.getWrapperField(this, proto.BlockChainPayload, 6));
+proto.TurtleToTurtle.T2TDatagram.prototype.getBlockchainpayload = function() {
+  return /** @type{?proto.TurtleToTurtle.BlockChainPayload} */ (
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.BlockChainPayload, 6));
 };
 
 
-/** @param {?proto.BlockChainPayload|undefined} value */
-proto.T2TDatagram.prototype.setBlockchainpayload = function(value) {
-  jspb.Message.setOneofWrapperField(this, 6, proto.T2TDatagram.oneofGroups_[0], value);
+/** @param {?proto.TurtleToTurtle.BlockChainPayload|undefined} value */
+proto.TurtleToTurtle.T2TDatagram.prototype.setBlockchainpayload = function(value) {
+  jspb.Message.setOneofWrapperField(this, 6, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
-proto.T2TDatagram.prototype.clearBlockchainpayload = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.clearBlockchainpayload = function() {
   this.setBlockchainpayload(undefined);
 };
 
@@ -370,7 +370,7 @@ proto.T2TDatagram.prototype.clearBlockchainpayload = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.T2TDatagram.prototype.hasBlockchainpayload = function() {
+proto.TurtleToTurtle.T2TDatagram.prototype.hasBlockchainpayload = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 

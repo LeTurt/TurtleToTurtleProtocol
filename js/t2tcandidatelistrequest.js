@@ -11,7 +11,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.T2TCandidateListRequest');
+goog.provide('proto.TurtleToTurtle.T2TCandidateListRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,19 +28,19 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.T2TCandidateListRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.T2TCandidateListRequest.repeatedFields_, null);
+proto.TurtleToTurtle.T2TCandidateListRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.TurtleToTurtle.T2TCandidateListRequest.repeatedFields_, null);
 };
-goog.inherits(proto.T2TCandidateListRequest, jspb.Message);
+goog.inherits(proto.TurtleToTurtle.T2TCandidateListRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.T2TCandidateListRequest.displayName = 'proto.T2TCandidateListRequest';
+  proto.TurtleToTurtle.T2TCandidateListRequest.displayName = 'proto.TurtleToTurtle.T2TCandidateListRequest';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.T2TCandidateListRequest.repeatedFields_ = [1];
+proto.TurtleToTurtle.T2TCandidateListRequest.repeatedFields_ = [1];
 
 
 
@@ -55,8 +55,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.T2TCandidateListRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.T2TCandidateListRequest.toObject(opt_includeInstance, this);
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.TurtleToTurtle.T2TCandidateListRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -65,11 +65,11 @@ proto.T2TCandidateListRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.T2TCandidateListRequest} msg The msg instance to transform.
+ * @param {!proto.TurtleToTurtle.T2TCandidateListRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidateListRequest.toObject = function(includeInstance, msg) {
+proto.TurtleToTurtle.T2TCandidateListRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     blockchainidList: jspb.Message.getRepeatedField(msg, 1)
   };
@@ -85,23 +85,23 @@ proto.T2TCandidateListRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.T2TCandidateListRequest}
+ * @return {!proto.TurtleToTurtle.T2TCandidateListRequest}
  */
-proto.T2TCandidateListRequest.deserializeBinary = function(bytes) {
+proto.TurtleToTurtle.T2TCandidateListRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.T2TCandidateListRequest;
-  return proto.T2TCandidateListRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.TurtleToTurtle.T2TCandidateListRequest;
+  return proto.TurtleToTurtle.T2TCandidateListRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.T2TCandidateListRequest} msg The message object to deserialize into.
+ * @param {!proto.TurtleToTurtle.T2TCandidateListRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.T2TCandidateListRequest}
+ * @return {!proto.TurtleToTurtle.T2TCandidateListRequest}
  */
-proto.T2TCandidateListRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.TurtleToTurtle.T2TCandidateListRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -125,9 +125,9 @@ proto.T2TCandidateListRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.T2TCandidateListRequest.prototype.serializeBinary = function() {
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.T2TCandidateListRequest.serializeBinaryToWriter(this, writer);
+  proto.TurtleToTurtle.T2TCandidateListRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -135,11 +135,11 @@ proto.T2TCandidateListRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.T2TCandidateListRequest} message
+ * @param {!proto.TurtleToTurtle.T2TCandidateListRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.T2TCandidateListRequest.serializeBinaryToWriter = function(message, writer) {
+proto.TurtleToTurtle.T2TCandidateListRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlockchainidList();
   if (f.length > 0) {
@@ -155,13 +155,13 @@ proto.T2TCandidateListRequest.serializeBinaryToWriter = function(message, writer
  * repeated uint32 blockChainId = 1;
  * @return {!Array<number>}
  */
-proto.T2TCandidateListRequest.prototype.getBlockchainidList = function() {
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.getBlockchainidList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /** @param {!Array<number>} value */
-proto.T2TCandidateListRequest.prototype.setBlockchainidList = function(value) {
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.setBlockchainidList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
 
@@ -170,12 +170,12 @@ proto.T2TCandidateListRequest.prototype.setBlockchainidList = function(value) {
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.T2TCandidateListRequest.prototype.addBlockchainid = function(value, opt_index) {
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.addBlockchainid = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
-proto.T2TCandidateListRequest.prototype.clearBlockchainidList = function() {
+proto.TurtleToTurtle.T2TCandidateListRequest.prototype.clearBlockchainidList = function() {
   this.setBlockchainidList([]);
 };
 
