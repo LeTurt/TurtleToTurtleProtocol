@@ -35,7 +35,7 @@ Functions of a seed node is as follows. This list is all inclusive.
 6. The node will insert the provided peer candidates in to its peer state database.
 7. The node will add the seed node's connection information into its peer state database.
 8. The node will attempt connection(s) to the target number of peers as defined in its compiled time configuration following the candidate election process as described in [Peer Election Process](#peer--election--process).
- a. If a connection fails, it will try connecting to another peer candidate using the same selection algorithm. This process continues util the list of nodes is exhausted.
+ a. If a connection fails, it will try connecting to another peer candidate using the same selection algorithm. This process continues until the list of nodes is exhausted.
  b. In the event the full list of peer candidates is exhausted, the node will reach back out to the seed for an additional list of peer candidates via [T2T-CandidateListRequest](#T2T---candidatelistrequest) and resume connection attempts are describted in #9.
 9. Once the node has connected to the target number of peers, standard operation then begins.
 
@@ -43,7 +43,7 @@ Functions of a seed node is as follows. This list is all inclusive.
 
 1. The node will open it's internal peer database.
 2. The node will attempt connection(s) to the target number of peers as defined in its provided configuration following the candidate election process as described in [Peer Election Process](#peer--election--process).
- a. If a connection fails, it will try connecting to another peer candidate using the same selection algorithm. This process continues util the list of nodes is exhausted.
+ a. If a connection fails, it will try connecting to another peer candidate using the same selection algorithm. This process continues until the list of nodes is exhausted.
  b. In the event the full list of peer candidates is exhausted, the node will perform the [Turtle-to-Turtle Bootstrap](#turtle---to---turtlebootstrap) process.
 3. Upon successful connect, the new node will send a [T2T-CandidateListRequest](#T2T---candidatelistrequest) to the peer node.
 4. Once connected, the peer will then send a maximum of 511 randomly selected and weighted peer candidates from its internal peer database to the node using a [T2T-CandidateList](#T2T---candidatelist) message. See [Peer Candidate Selection](#peer-candidate-selection) for information the weighting system used.
