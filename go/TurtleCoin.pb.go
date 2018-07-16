@@ -35,7 +35,7 @@ func (m *TurtleBlock) Reset()         { *m = TurtleBlock{} }
 func (m *TurtleBlock) String() string { return proto.CompactTextString(m) }
 func (*TurtleBlock) ProtoMessage()    {}
 func (*TurtleBlock) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{0}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{0}
 }
 func (m *TurtleBlock) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleBlock.Unmarshal(m, b)
@@ -91,7 +91,7 @@ func (m *TurtleBlockHeader) Reset()         { *m = TurtleBlockHeader{} }
 func (m *TurtleBlockHeader) String() string { return proto.CompactTextString(m) }
 func (*TurtleBlockHeader) ProtoMessage()    {}
 func (*TurtleBlockHeader) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{1}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{1}
 }
 func (m *TurtleBlockHeader) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleBlockHeader.Unmarshal(m, b)
@@ -157,7 +157,7 @@ func (m *TurtleBaseTransaction) Reset()         { *m = TurtleBaseTransaction{} }
 func (m *TurtleBaseTransaction) String() string { return proto.CompactTextString(m) }
 func (*TurtleBaseTransaction) ProtoMessage()    {}
 func (*TurtleBaseTransaction) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{2}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{2}
 }
 func (m *TurtleBaseTransaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleBaseTransaction.Unmarshal(m, b)
@@ -196,7 +196,7 @@ func (m *TurtleTransaction) Reset()         { *m = TurtleTransaction{} }
 func (m *TurtleTransaction) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransaction) ProtoMessage()    {}
 func (*TurtleTransaction) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{3}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{3}
 }
 func (m *TurtleTransaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransaction.Unmarshal(m, b)
@@ -246,7 +246,7 @@ func (m *TurtleTransactionPrefix) Reset()         { *m = TurtleTransactionPrefix
 func (m *TurtleTransactionPrefix) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionPrefix) ProtoMessage()    {}
 func (*TurtleTransactionPrefix) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{4}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{4}
 }
 func (m *TurtleTransactionPrefix) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionPrefix.Unmarshal(m, b)
@@ -319,7 +319,7 @@ func (m *TurtleTransactionSignature) Reset()         { *m = TurtleTransactionSig
 func (m *TurtleTransactionSignature) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionSignature) ProtoMessage()    {}
 func (*TurtleTransactionSignature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{5}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{5}
 }
 func (m *TurtleTransactionSignature) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionSignature.Unmarshal(m, b)
@@ -360,7 +360,7 @@ func (m *TurtleTransactionInput) Reset()         { *m = TurtleTransactionInput{}
 func (m *TurtleTransactionInput) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionInput) ProtoMessage()    {}
 func (*TurtleTransactionInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{6}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{6}
 }
 func (m *TurtleTransactionInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionInput.Unmarshal(m, b)
@@ -501,7 +501,7 @@ func (m *TurtleTransactionInputGen) Reset()         { *m = TurtleTransactionInpu
 func (m *TurtleTransactionInputGen) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionInputGen) ProtoMessage()    {}
 func (*TurtleTransactionInputGen) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{7}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{7}
 }
 func (m *TurtleTransactionInputGen) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionInputGen.Unmarshal(m, b)
@@ -549,7 +549,7 @@ func (m *TurtleTransactionInputKey) Reset()         { *m = TurtleTransactionInpu
 func (m *TurtleTransactionInputKey) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionInputKey) ProtoMessage()    {}
 func (*TurtleTransactionInputKey) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{8}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{8}
 }
 func (m *TurtleTransactionInputKey) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionInputKey.Unmarshal(m, b)
@@ -609,7 +609,7 @@ func (m *TurtleTransactionOutputTarget) Reset()         { *m = TurtleTransaction
 func (m *TurtleTransactionOutputTarget) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionOutputTarget) ProtoMessage()    {}
 func (*TurtleTransactionOutputTarget) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{9}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{9}
 }
 func (m *TurtleTransactionOutputTarget) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionOutputTarget.Unmarshal(m, b)
@@ -655,7 +655,7 @@ func (m *TurtleTransactionOutput) Reset()         { *m = TurtleTransactionOutput
 func (m *TurtleTransactionOutput) String() string { return proto.CompactTextString(m) }
 func (*TurtleTransactionOutput) ProtoMessage()    {}
 func (*TurtleTransactionOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_TurtleCoin_333fb451eb203e8e, []int{10}
+	return fileDescriptor_TurtleCoin_3f3db7caf6e9097e, []int{10}
 }
 func (m *TurtleTransactionOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TurtleTransactionOutput.Unmarshal(m, b)
@@ -703,9 +703,9 @@ func init() {
 	proto.RegisterType((*TurtleTransactionOutput)(nil), "TurtleToTurtle.TurtleCoin.TurtleTransactionOutput")
 }
 
-func init() { proto.RegisterFile("TurtleCoin.proto", fileDescriptor_TurtleCoin_333fb451eb203e8e) }
+func init() { proto.RegisterFile("TurtleCoin.proto", fileDescriptor_TurtleCoin_3f3db7caf6e9097e) }
 
-var fileDescriptor_TurtleCoin_333fb451eb203e8e = []byte{
+var fileDescriptor_TurtleCoin_3f3db7caf6e9097e = []byte{
 	// 586 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xb4, 0x95, 0xcd, 0x6e, 0xd3, 0x40,
 	0x10, 0xc7, 0x71, 0x3e, 0xc9, 0xa4, 0x15, 0xed, 0x0a, 0x8a, 0x5b, 0x01, 0xaa, 0xf6, 0xd4, 0x43,

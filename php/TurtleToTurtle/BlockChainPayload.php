@@ -1,6 +1,6 @@
 <?php
 // Copyright (c) 2018, The TurtleCoin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 
 
@@ -18,6 +18,10 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class BlockChainPayload extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>uint32 blockChainId = 1;</code>
+     */
+    private $blockChainId = 0;
     protected $data;
 
     /**
@@ -26,6 +30,7 @@ class BlockChainPayload extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int $blockChainId
      *     @type \TurtleToTurtle\TurtleCoin\TurtleBlock $block
      *     @type \TurtleToTurtle\TurtleCoin\TurtleTransaction $transaction
      * }
@@ -36,45 +41,67 @@ class BlockChainPayload extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleBlock block = 1;</code>
+     * Generated from protobuf field <code>uint32 blockChainId = 1;</code>
+     * @return int
+     */
+    public function getBlockChainId()
+    {
+        return $this->blockChainId;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 blockChainId = 1;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBlockChainId($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->blockChainId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleBlock block = 2;</code>
      * @return \TurtleToTurtle\TurtleCoin\TurtleBlock
      */
     public function getBlock()
     {
-        return $this->readOneof(1);
+        return $this->readOneof(2);
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleBlock block = 1;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleBlock block = 2;</code>
      * @param \TurtleToTurtle\TurtleCoin\TurtleBlock $var
      * @return $this
      */
     public function setBlock($var)
     {
         GPBUtil::checkMessage($var, \TurtleToTurtle\TurtleCoin\TurtleBlock::class);
-        $this->writeOneof(1, $var);
+        $this->writeOneof(2, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 2;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 3;</code>
      * @return \TurtleToTurtle\TurtleCoin\TurtleTransaction
      */
     public function getTransaction()
     {
-        return $this->readOneof(2);
+        return $this->readOneof(3);
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 2;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 3;</code>
      * @param \TurtleToTurtle\TurtleCoin\TurtleTransaction $var
      * @return $this
      */
     public function setTransaction($var)
     {
         GPBUtil::checkMessage($var, \TurtleToTurtle\TurtleCoin\TurtleTransaction::class);
-        $this->writeOneof(2, $var);
+        $this->writeOneof(3, $var);
 
         return $this;
     }

@@ -1,5 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 
 /**
@@ -46,16 +46,16 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.TurtleToTurtle.T2TDatagram.oneofGroups_ = [[4,5,6]];
+proto.TurtleToTurtle.T2TDatagram.oneofGroups_ = [[6,7,8]];
 
 /**
  * @enum {number}
  */
 proto.TurtleToTurtle.T2TDatagram.DatapayloadCase = {
   DATAPAYLOAD_NOT_SET: 0,
-  T2TCANDIDATELIST: 4,
-  T2TCANDIDATELISTREQUEST: 5,
-  BLOCKCHAINPAYLOAD: 6
+  T2TCANDIDATELIST: 6,
+  T2TCANDIDATELISTREQUEST: 7,
+  BLOCKCHAINPAYLOAD: 8
 };
 
 /**
@@ -97,6 +97,8 @@ proto.TurtleToTurtle.T2TDatagram.toObject = function(includeInstance, msg) {
     p2pnetworkid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     version: jspb.Message.getFieldWithDefault(msg, 2, 0),
     peerid: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    agent: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    nodeversion: jspb.Message.getFieldWithDefault(msg, 5, ""),
     t2tcandidatelist: (f = msg.getT2tcandidatelist()) && proto.TurtleToTurtle.T2TCandidateList.toObject(includeInstance, f),
     t2tcandidatelistrequest: (f = msg.getT2tcandidatelistrequest()) && proto.TurtleToTurtle.T2TCandidateListRequest.toObject(includeInstance, f),
     blockchainpayload: (f = msg.getBlockchainpayload()) && proto.TurtleToTurtle.BlockChainPayload.toObject(includeInstance, f)
@@ -149,16 +151,24 @@ proto.TurtleToTurtle.T2TDatagram.deserializeBinaryFromReader = function(msg, rea
       msg.setPeerid(value);
       break;
     case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAgent(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNodeversion(value);
+      break;
+    case 6:
       var value = new proto.TurtleToTurtle.T2TCandidateList;
       reader.readMessage(value,proto.TurtleToTurtle.T2TCandidateList.deserializeBinaryFromReader);
       msg.setT2tcandidatelist(value);
       break;
-    case 5:
+    case 7:
       var value = new proto.TurtleToTurtle.T2TCandidateListRequest;
       reader.readMessage(value,proto.TurtleToTurtle.T2TCandidateListRequest.deserializeBinaryFromReader);
       msg.setT2tcandidatelistrequest(value);
       break;
-    case 6:
+    case 8:
       var value = new proto.TurtleToTurtle.BlockChainPayload;
       reader.readMessage(value,proto.TurtleToTurtle.BlockChainPayload.deserializeBinaryFromReader);
       msg.setBlockchainpayload(value);
@@ -213,10 +223,24 @@ proto.TurtleToTurtle.T2TDatagram.serializeBinaryToWriter = function(message, wri
       f
     );
   }
+  f = message.getAgent();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getNodeversion();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
   f = message.getT2tcandidatelist();
   if (f != null) {
     writer.writeMessage(
-      4,
+      6,
       f,
       proto.TurtleToTurtle.T2TCandidateList.serializeBinaryToWriter
     );
@@ -224,7 +248,7 @@ proto.TurtleToTurtle.T2TDatagram.serializeBinaryToWriter = function(message, wri
   f = message.getT2tcandidatelistrequest();
   if (f != null) {
     writer.writeMessage(
-      5,
+      7,
       f,
       proto.TurtleToTurtle.T2TCandidateListRequest.serializeBinaryToWriter
     );
@@ -232,7 +256,7 @@ proto.TurtleToTurtle.T2TDatagram.serializeBinaryToWriter = function(message, wri
   f = message.getBlockchainpayload();
   if (f != null) {
     writer.writeMessage(
-      6,
+      8,
       f,
       proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter
     );
@@ -286,18 +310,48 @@ proto.TurtleToTurtle.T2TDatagram.prototype.setPeerid = function(value) {
 
 
 /**
- * optional T2TCandidateList t2tCandidateList = 4;
+ * optional string agent = 4;
+ * @return {string}
+ */
+proto.TurtleToTurtle.T2TDatagram.prototype.getAgent = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.TurtleToTurtle.T2TDatagram.prototype.setAgent = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string nodeVersion = 5;
+ * @return {string}
+ */
+proto.TurtleToTurtle.T2TDatagram.prototype.getNodeversion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.TurtleToTurtle.T2TDatagram.prototype.setNodeversion = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional T2TCandidateList t2tCandidateList = 6;
  * @return {?proto.TurtleToTurtle.T2TCandidateList}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.getT2tcandidatelist = function() {
   return /** @type{?proto.TurtleToTurtle.T2TCandidateList} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateList, 4));
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateList, 6));
 };
 
 
 /** @param {?proto.TurtleToTurtle.T2TCandidateList|undefined} value */
 proto.TurtleToTurtle.T2TDatagram.prototype.setT2tcandidatelist = function(value) {
-  jspb.Message.setOneofWrapperField(this, 4, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
+  jspb.Message.setOneofWrapperField(this, 6, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
@@ -311,23 +365,23 @@ proto.TurtleToTurtle.T2TDatagram.prototype.clearT2tcandidatelist = function() {
  * @return {!boolean}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.hasT2tcandidatelist = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
 /**
- * optional T2TCandidateListRequest t2tCandidateListRequest = 5;
+ * optional T2TCandidateListRequest t2tCandidateListRequest = 7;
  * @return {?proto.TurtleToTurtle.T2TCandidateListRequest}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.getT2tcandidatelistrequest = function() {
   return /** @type{?proto.TurtleToTurtle.T2TCandidateListRequest} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateListRequest, 5));
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.T2TCandidateListRequest, 7));
 };
 
 
 /** @param {?proto.TurtleToTurtle.T2TCandidateListRequest|undefined} value */
 proto.TurtleToTurtle.T2TDatagram.prototype.setT2tcandidatelistrequest = function(value) {
-  jspb.Message.setOneofWrapperField(this, 5, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
+  jspb.Message.setOneofWrapperField(this, 7, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
@@ -341,23 +395,23 @@ proto.TurtleToTurtle.T2TDatagram.prototype.clearT2tcandidatelistrequest = functi
  * @return {!boolean}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.hasT2tcandidatelistrequest = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
 /**
- * optional BlockChainPayload blockChainPayload = 6;
+ * optional BlockChainPayload blockChainPayload = 8;
  * @return {?proto.TurtleToTurtle.BlockChainPayload}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.getBlockchainpayload = function() {
   return /** @type{?proto.TurtleToTurtle.BlockChainPayload} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.BlockChainPayload, 6));
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.BlockChainPayload, 8));
 };
 
 
 /** @param {?proto.TurtleToTurtle.BlockChainPayload|undefined} value */
 proto.TurtleToTurtle.T2TDatagram.prototype.setBlockchainpayload = function(value) {
-  jspb.Message.setOneofWrapperField(this, 6, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
+  jspb.Message.setOneofWrapperField(this, 8, proto.TurtleToTurtle.T2TDatagram.oneofGroups_[0], value);
 };
 
 
@@ -371,7 +425,7 @@ proto.TurtleToTurtle.T2TDatagram.prototype.clearBlockchainpayload = function() {
  * @return {!boolean}
  */
 proto.TurtleToTurtle.T2TDatagram.prototype.hasBlockchainpayload = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

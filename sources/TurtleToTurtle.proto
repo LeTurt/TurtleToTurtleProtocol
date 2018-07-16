@@ -11,10 +11,12 @@ message T2TDatagram {
   uint32 p2pNetworkId = 1;
   uint32 version = 2;
   string peerId = 3;
+  string agent = 4;
+  string nodeVersion = 5;
   oneof dataPayload {
-    T2TCandidateList t2tCandidateList = 4;
-    T2TCandidateListRequest t2tCandidateListRequest = 5;
-    BlockChainPayload blockChainPayload = 6;
+    T2TCandidateList t2tCandidateList = 6;
+    T2TCandidateListRequest t2tCandidateListRequest = 7;
+    BlockChainPayload blockChainPayload = 8;
   }
 }
 
@@ -42,8 +44,9 @@ message T2TNodeCapability {
 }
 
 message BlockChainPayload {
+  uint32 blockChainId = 1;
   oneof data {
-    TurtleToTurtle.TurtleCoin.TurtleBlock block = 1;
-    TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 2;
+    TurtleToTurtle.TurtleCoin.TurtleBlock block = 2;
+    TurtleToTurtle.TurtleCoin.TurtleTransaction transaction = 3;
   }
 }

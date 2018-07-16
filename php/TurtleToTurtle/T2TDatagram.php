@@ -1,6 +1,6 @@
 <?php
 // Copyright (c) 2018, The TurtleCoin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 
 
@@ -30,6 +30,14 @@ class T2TDatagram extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string peerId = 3;</code>
      */
     private $peerId = '';
+    /**
+     * Generated from protobuf field <code>string agent = 4;</code>
+     */
+    private $agent = '';
+    /**
+     * Generated from protobuf field <code>string nodeVersion = 5;</code>
+     */
+    private $nodeVersion = '';
     protected $dataPayload;
 
     /**
@@ -41,6 +49,8 @@ class T2TDatagram extends \Google\Protobuf\Internal\Message
      *     @type int $p2pNetworkId
      *     @type int $version
      *     @type string $peerId
+     *     @type string $agent
+     *     @type string $nodeVersion
      *     @type \TurtleToTurtle\T2TCandidateList $t2tCandidateList
      *     @type \TurtleToTurtle\T2TCandidateListRequest $t2tCandidateListRequest
      *     @type \TurtleToTurtle\BlockChainPayload $blockChainPayload
@@ -118,67 +128,111 @@ class T2TDatagram extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateList t2tCandidateList = 4;</code>
+     * Generated from protobuf field <code>string agent = 4;</code>
+     * @return string
+     */
+    public function getAgent()
+    {
+        return $this->agent;
+    }
+
+    /**
+     * Generated from protobuf field <code>string agent = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAgent($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->agent = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string nodeVersion = 5;</code>
+     * @return string
+     */
+    public function getNodeVersion()
+    {
+        return $this->nodeVersion;
+    }
+
+    /**
+     * Generated from protobuf field <code>string nodeVersion = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNodeVersion($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->nodeVersion = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateList t2tCandidateList = 6;</code>
      * @return \TurtleToTurtle\T2TCandidateList
      */
     public function getT2TCandidateList()
     {
-        return $this->readOneof(4);
+        return $this->readOneof(6);
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateList t2tCandidateList = 4;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateList t2tCandidateList = 6;</code>
      * @param \TurtleToTurtle\T2TCandidateList $var
      * @return $this
      */
     public function setT2TCandidateList($var)
     {
         GPBUtil::checkMessage($var, \TurtleToTurtle\T2TCandidateList::class);
-        $this->writeOneof(4, $var);
+        $this->writeOneof(6, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateListRequest t2tCandidateListRequest = 5;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateListRequest t2tCandidateListRequest = 7;</code>
      * @return \TurtleToTurtle\T2TCandidateListRequest
      */
     public function getT2TCandidateListRequest()
     {
-        return $this->readOneof(5);
+        return $this->readOneof(7);
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateListRequest t2tCandidateListRequest = 5;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.T2TCandidateListRequest t2tCandidateListRequest = 7;</code>
      * @param \TurtleToTurtle\T2TCandidateListRequest $var
      * @return $this
      */
     public function setT2TCandidateListRequest($var)
     {
         GPBUtil::checkMessage($var, \TurtleToTurtle\T2TCandidateListRequest::class);
-        $this->writeOneof(5, $var);
+        $this->writeOneof(7, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.BlockChainPayload blockChainPayload = 6;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.BlockChainPayload blockChainPayload = 8;</code>
      * @return \TurtleToTurtle\BlockChainPayload
      */
     public function getBlockChainPayload()
     {
-        return $this->readOneof(6);
+        return $this->readOneof(8);
     }
 
     /**
-     * Generated from protobuf field <code>.TurtleToTurtle.BlockChainPayload blockChainPayload = 6;</code>
+     * Generated from protobuf field <code>.TurtleToTurtle.BlockChainPayload blockChainPayload = 8;</code>
      * @param \TurtleToTurtle\BlockChainPayload $var
      * @return $this
      */
     public function setBlockChainPayload($var)
     {
         GPBUtil::checkMessage($var, \TurtleToTurtle\BlockChainPayload::class);
-        $this->writeOneof(6, $var);
+        $this->writeOneof(8, $var);
 
         return $this;
     }

@@ -1,5 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 
 /**
@@ -45,15 +45,15 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.TurtleToTurtle.BlockChainPayload.oneofGroups_ = [[1,2]];
+proto.TurtleToTurtle.BlockChainPayload.oneofGroups_ = [[2,3]];
 
 /**
  * @enum {number}
  */
 proto.TurtleToTurtle.BlockChainPayload.DataCase = {
   DATA_NOT_SET: 0,
-  BLOCK: 1,
-  TRANSACTION: 2
+  BLOCK: 2,
+  TRANSACTION: 3
 };
 
 /**
@@ -92,6 +92,7 @@ proto.TurtleToTurtle.BlockChainPayload.prototype.toObject = function(opt_include
  */
 proto.TurtleToTurtle.BlockChainPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
+    blockchainid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     block: (f = msg.getBlock()) && proto.TurtleToTurtle.TurtleCoin.TurtleBlock.toObject(includeInstance, f),
     transaction: (f = msg.getTransaction()) && proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.toObject(includeInstance, f)
   };
@@ -131,11 +132,15 @@ proto.TurtleToTurtle.BlockChainPayload.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setBlockchainid(value);
+      break;
+    case 2:
       var value = new proto.TurtleToTurtle.TurtleCoin.TurtleBlock;
       reader.readMessage(value,proto.TurtleToTurtle.TurtleCoin.TurtleBlock.deserializeBinaryFromReader);
       msg.setBlock(value);
       break;
-    case 2:
+    case 3:
       var value = new proto.TurtleToTurtle.TurtleCoin.TurtleTransaction;
       reader.readMessage(value,proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.deserializeBinaryFromReader);
       msg.setTransaction(value);
@@ -169,10 +174,17 @@ proto.TurtleToTurtle.BlockChainPayload.prototype.serializeBinary = function() {
  */
 proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getBlockchainid();
+  if (f !== 0) {
+    writer.writeUint32(
+      1,
+      f
+    );
+  }
   f = message.getBlock();
   if (f != null) {
     writer.writeMessage(
-      1,
+      2,
       f,
       proto.TurtleToTurtle.TurtleCoin.TurtleBlock.serializeBinaryToWriter
     );
@@ -180,7 +192,7 @@ proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter = function(messag
   f = message.getTransaction();
   if (f != null) {
     writer.writeMessage(
-      2,
+      3,
       f,
       proto.TurtleToTurtle.TurtleCoin.TurtleTransaction.serializeBinaryToWriter
     );
@@ -189,18 +201,33 @@ proto.TurtleToTurtle.BlockChainPayload.serializeBinaryToWriter = function(messag
 
 
 /**
- * optional TurtleCoin.TurtleBlock block = 1;
+ * optional uint32 blockChainId = 1;
+ * @return {number}
+ */
+proto.TurtleToTurtle.BlockChainPayload.prototype.getBlockchainid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.TurtleToTurtle.BlockChainPayload.prototype.setBlockchainid = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional TurtleCoin.TurtleBlock block = 2;
  * @return {?proto.TurtleToTurtle.TurtleCoin.TurtleBlock}
  */
 proto.TurtleToTurtle.BlockChainPayload.prototype.getBlock = function() {
   return /** @type{?proto.TurtleToTurtle.TurtleCoin.TurtleBlock} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleBlock, 1));
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleBlock, 2));
 };
 
 
 /** @param {?proto.TurtleToTurtle.TurtleCoin.TurtleBlock|undefined} value */
 proto.TurtleToTurtle.BlockChainPayload.prototype.setBlock = function(value) {
-  jspb.Message.setOneofWrapperField(this, 1, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
+  jspb.Message.setOneofWrapperField(this, 2, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
 };
 
 
@@ -214,23 +241,23 @@ proto.TurtleToTurtle.BlockChainPayload.prototype.clearBlock = function() {
  * @return {!boolean}
  */
 proto.TurtleToTurtle.BlockChainPayload.prototype.hasBlock = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional TurtleCoin.TurtleTransaction transaction = 2;
+ * optional TurtleCoin.TurtleTransaction transaction = 3;
  * @return {?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction}
  */
 proto.TurtleToTurtle.BlockChainPayload.prototype.getTransaction = function() {
   return /** @type{?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction} */ (
-    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleTransaction, 2));
+    jspb.Message.getWrapperField(this, proto.TurtleToTurtle.TurtleCoin.TurtleTransaction, 3));
 };
 
 
 /** @param {?proto.TurtleToTurtle.TurtleCoin.TurtleTransaction|undefined} value */
 proto.TurtleToTurtle.BlockChainPayload.prototype.setTransaction = function(value) {
-  jspb.Message.setOneofWrapperField(this, 2, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
+  jspb.Message.setOneofWrapperField(this, 3, proto.TurtleToTurtle.BlockChainPayload.oneofGroups_[0], value);
 };
 
 
@@ -244,7 +271,7 @@ proto.TurtleToTurtle.BlockChainPayload.prototype.clearTransaction = function() {
  * @return {!boolean}
  */
 proto.TurtleToTurtle.BlockChainPayload.prototype.hasTransaction = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

@@ -111,6 +111,8 @@ All messages between peers are encapsulated into the standard T2T-Datagram befor
 |p2pNetworkId|uint32|A unique ID assigned to the peer-to-peer network|
 |version|uint32|The turtle-to-turtle protocol version supported|
 |peerId|string|The ID of the node|
+|agent|string|The node agent string|
+|nodeVersion|string|The node version|
 |dataPayload|Object|The Protobuf payload of any of the types below|
 
 #### Protobuf Structure
@@ -120,10 +122,12 @@ message T2TDatagram {
   uint32 p2pNetworkId = 1;
   uint32 version = 2;
   string peerId = 3;
+  string agent = 4;
+  string nodeVersion = 5;
   oneof dataPayload {
-    T2TCandidateList t2tCandidateList = 4;
-    T2TCandidateListRequest t2tCandidateListRequest = 5;
-    BlockChainPayload blockChainPayload = 6;
+    T2TCandidateList t2tCandidateList = 6;
+    T2TCandidateListRequest t2tCandidateListRequest = 7;
+    BlockChainPayload blockChainPayload = 8;
   }
 }
 ```
@@ -216,9 +220,10 @@ message T2TNodeCapability {
 
 ```
 message BlockChainPayload {
+  uint32 blockChainId = 1;
   oneof data {
-    TurtleBlock block = 1;
-    TurtleTransaction transaction = 2;
+    TurtleBlock block = 2;
+    TurtleTransaction transaction = 3;
   }
 }
 ```
